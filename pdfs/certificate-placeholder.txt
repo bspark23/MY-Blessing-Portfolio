@@ -1,0 +1,19 @@
+CERTIFICATE PLACEHOLDER FILES NEEDED:
+
+To add your certificates, simply place your PDF files in this pdfs folder with these exact names:
+
+1. aws-developer-certificate.pdf
+2. react-advanced-certificate.pdf  
+3. fullstack-web-certificate.pdf
+4. nodejs-ibm-certificate.pdf
+5. typescript-fundamentals-certificate.pdf
+
+Your CV is already set up and working: cv.pdf
+
+The portfolio will automatically detect and display these PDFs when someone clicks on the certificate "View" buttons.
+
+If you don't have a certificate for any of these, you can either:
+- Remove that certificate from the CERTIFICATES array in portfolio-script.js
+- Or replace it with a different certificate you have
+
+The system is designed to be flexible - just drop your PDF files here and they'll work immediately!

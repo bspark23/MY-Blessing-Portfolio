@@ -1,0 +1,3 @@
+# Netlify redirects file
+/ /portfolio.html 200
+/* /portfolio.html 404

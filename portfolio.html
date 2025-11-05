@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blessing Mbata - Full Stack Developer</title>
+    <meta name="description" content="Modern Portfolio of Blessing Mbata - Full Stack Developer">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="portfolio-styles.css">
+</head>
+
+<body>
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-content">
+                <!-- Logo -->
+                <div class="nav-logo">
+                    <button onclick="scrollToSection('home')" class="logo-btn">
+                       Mbata Blessing Adaoma
+                    </button>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="nav-menu desktop-nav">
+                    <button onclick="scrollToSection('home')" class="nav-link">Home</button>
+                    <button onclick="scrollToSection('about')" class="nav-link">About</button>
+                    <button onclick="scrollToSection('skills')" class="nav-link">Skills</button>
+                    <button onclick="scrollToSection('projects')" class="nav-link">Projects</button>
+                    <button onclick="scrollToSection('certificates')" class="nav-link">Certificates</button>
+                    <button onclick="openCV()" class="nav-link">CV</button>
+                    <button onclick="scrollToSection('contact')" class="nav-link">Contact</button>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="nav-cta desktop-nav">
+                    <button onclick="scrollToSection('contact')" class="btn-primary">
+                        Hire Me
+                    </button>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="mobile-menu-btn">
+                    <button onclick="toggleMobileMenu()" class="menu-toggle" id="menuToggle">
+                        <i class="fas fa-bars" id="menuIcon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav" id="mobileNav">
+            <div class="mobile-nav-content">
+                <button onclick="scrollToSection('home'); closeMobileMenu()" class="mobile-nav-link">Home</button>
+                <button onclick="scrollToSection('about'); closeMobileMenu()" class="mobile-nav-link">About</button>
+                <button onclick="scrollToSection('skills'); closeMobileMenu()" class="mobile-nav-link">Skills</button>
+                <button onclick="scrollToSection('projects'); closeMobileMenu()"
+                    class="mobile-nav-link">Projects</button>
+                <button onclick="scrollToSection('certificates'); closeMobileMenu()"
+                    class="mobile-nav-link">Certificates</button>
+                <button onclick="openCV(); closeMobileMenu()" class="mobile-nav-link">CV</button>
+                <button onclick="scrollToSection('contact'); closeMobileMenu()" class="mobile-nav-link">Contact</button>
+                <button onclick="scrollToSection('contact'); closeMobileMenu()" class="btn-primary mobile-cta">
+                    Hire Me
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <!-- Particle Background -->
+            <div class="particle-background" id="particleBackground"></div>
+
+            <div class="hero-container">
+                <div class="hero-grid">
+                    <!-- Left Content -->
+                    <div class="hero-content">
+                        <h1 class="hero-title">
+                            I'm <span class="gradient-text"> Mbata Blessing Adaoma</span> — Full Stack Software Developer
+                        </h1>
+
+                        <div class="hero-tagline">
+                            <span id="typewriter"></span>
+                            <span class="cursor" id="cursor">|</span>
+                        </div>
+
+                        <p class="hero-bio">
+                            I'm a  passionate, Results-driven, and  detail-oriented  full stack developer and designer with 3+ years of experience building real-time, user-centered Ai-powered web
+                            applications. I combine code and design to create responsive, high-performance experiences.
+                            I enjoy solving problems, learning new technologies, and shipping products that matter.
+                        </p>
+
+                        <!-- CTA Buttons -->
+                        <div class="hero-buttons">
+                            <button onclick="openGitHub()" class="btn-secondary">
+                                <i class="fab fa-github"></i>
+                                Star Me on GitHub
+                            </button>
+
+                            <button onclick="openCV()" class="btn-primary">
+                                <i class="fas fa-eye"></i>
+                                View My CV
+                            </button>
+
+                            <button onclick="downloadCV()" class="btn-secondary">
+                                <i class="fas fa-download"></i>
+                                Download CV
+                            </button>
+
+                            <button onclick="scrollToSection('contact')" class="btn-secondary">
+                                <i class="fas fa-envelope"></i>
+                                Hire Me
+                            </button>
+                        </div>
+
+                        <!-- Stats -->
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <div class="stat-number gradient-text">3+</div>
+                                <div class="stat-label">Years Experience</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number gradient-text">50+</div>
+                                <div class="stat-label">Projects Completed</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number gradient-text">100%</div>
+                                <div class="stat-label">Client Satisfaction</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Content - Portrait -->
+                    <div class="hero-portrait">
+                        <div class="portrait-container">
+                            <div class="portrait-glow"></div>
+                            <div class="portrait-image">
+                                <img src="photo_6042058618359712634_y.jpg" alt="Blessing Mbata - Full Stack Developer"
+                                    class="portrait-img" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        About <span class="gradient-text">Me</span>
+                    </h2>
+                    <p class="section-subtitle">
+                       <p> Im a passionate, detail-oriented and Results-driven Full Stack Developer with 3+ years, building responsive, scalable web applications using HTML, CSS, JavaScript,
+React, Next.js, PHP, AngularJS, Java, PostgreSQL, Tailwind CSS, and TypeScript, with backend expertise in Node.js </p> <p>
+                    </p> and APIs. I also bring product management experience and proficiency with Microsoft Office, WordPress, and nocode platforms to deliver fast, customizable solutions. I leverage AI tools (ChatGPT, GitHub Copilot, Notion AI) to
+boost productivity and creativity, and I am committed to continuous learning and applying technology to solve realworld problems.
+
+                    </p>
+                </div>
+
+                <div class="about-grid">
+                    <!-- Left Column - Story -->
+                    <div class="about-story">
+                        <div class="glass-card">
+                            <h3 class="card-title gradient-text">My Journey</h3>
+                            <p class="card-text">
+                                I'm a passionate full stack developer and designer with 3+ years building
+                                user-centered web applications. I combine code and design to create responsive,
+                                high-performance experiences that solve real-world problems.
+                            </p>
+
+                            <div class="tech-grid">
+                                <div class="tech-item">
+                                    <div class="tech-name gradient-text">React, Nextjs & Angularjs</div>
+                                    <div class="tech-label">Primary  Frontend Framework</div>
+                                </div>
+                                <div class="tech-item">
+                                    <div class="tech-name gradient-text">Node.js & Java</div>
+                                    <div class="tech-label">Backend Backend Framework</div>
+                                </div>
+                                <div class="tech-item">
+                                    <div class="tech-name gradient-text">TypeScript</div>
+                                    <div class="tech-label">Type Safety</div>
+                                </div>
+                                <div class="tech-item">
+                                    <div class="tech-name gradient-text">AWS</div>
+                                    <div class="tech-label">Cloud Platform</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="glass-card">
+                            <h3 class="card-title gradient-text">What I Do</h3>
+                            <ul class="feature-list">
+                                <li class="feature-item">
+                                    <div class="feature-dot"></div>
+                                    Build responsive web applications with modern frameworks
+                                </li>
+                                <li class="feature-item">
+                                    <div class="feature-dot"></div>
+                                    Design intuitive user interfaces and experiences
+                                </li>
+                                <li class="feature-item">
+                                    <div class="feature-dot"></div>
+                                    Develop scalable backend systems and APIs
+                                </li>
+                                <li class="feature-item">
+                                    <div class="feature-dot"></div>
+                                    Optimize performance and ensure accessibility
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Right Column - Timeline -->
+                    <div class="about-timeline">
+                        <h3 class="timeline-title gradient-text">My Timeline</h3>
+
+                        <div class="timeline">
+                            <div class="timeline-line"></div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-dot">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <div class="timeline-content glass-card">
+                                    <div class="timeline-year">2023</div>
+                                    <h4 class="timeline-event">Started Web Development Journey</h4>
+                                    <p class="timeline-desc">Began learning HTML, CSS, and JavaScript fundamentals</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-dot">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div class="timeline-content glass-card">
+                                    <div class="timeline-year">2024</div>
+                                    <h4 class="timeline-event">First Full Stack Project</h4>
+                                    <p class="timeline-desc">Built my first complete web application using React and
+                                        Node.js</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-dot">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="timeline-content glass-card">
+                                    <div class="timeline-year">2024</div>
+                                    <h4 class="timeline-event">Professional Development</h4>
+                                    <p class="timeline-desc">Started working on client projects and expanded to mobile
+                                        development</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-dot">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <div class="timeline-content glass-card">
+                                    <div class="timeline-year">2024</div>
+                                    <h4 class="timeline-event">Advanced Specialization</h4>
+                                    <p class="timeline-desc">Mastered modern frameworks and cloud technologies</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-dot">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <div class="timeline-content glass-card">
+                                    <div class="timeline-year">2025 present</div>
+                                    <h4 class="timeline-event">Currently a professional Fulstack Developer</h4>
+                                    <p class="timeline-desc">Mastered modern frameworks and cloud technologies</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        My <span class="gradient-text">Skills</span>
+                    </h2>
+                    <p class="section-subtitle">
+                        Technologies and tools I use to bring ideas to life
+                    </p>
+                    <div class="experience-badge">
+                        <div class="pulse-dot"></div>
+                        <span class="experience-text">3+ years experience</span>
+                    </div>
+                </div>
+
+                <!-- Category Filter -->
+                <div class="skills-filter">
+                    <button onclick="filterSkills('All')" class="filter-btn active" data-category="All">All</button>
+                    <button onclick="filterSkills('Frontend')" class="filter-btn"
+                        data-category="Frontend">Frontend</button>
+                    <button onclick="filterSkills('Backend')" class="filter-btn"
+                        data-category="Backend">Backend</button>
+                    <button onclick="filterSkills('Language')" class="filter-btn"
+                        data-category="Language">Language</button>
+                    <button onclick="filterSkills('Database')" class="filter-btn"
+                        data-category="Database">Database</button>
+                    <button onclick="filterSkills('Tools')" class="filter-btn" data-category="Tools">Tools</button>
+                    <button onclick="filterSkills('Cloud')" class="filter-btn" data-category="Cloud">Cloud</button>
+                </div>
+
+                <!-- Skills Grid -->
+                <div class="skills-grid" id="skillsGrid">
+                    <!-- Skills will be populated by JavaScript -->
+                </div>
+
+                <!-- Skills Summary -->
+                <div class="skills-summary">
+                    <div class="glass-card">
+                        <h3 class="card-title gradient-text">Tech Stack Overview</h3>
+                        <p class="card-text">
+                            My expertise spans across modern web technologies including <strong>React</strong>,
+                            <strong>Next.js</strong>, and <strong>TypeScript</strong> for
+                            frontend development, <strong>Node.js</strong>, <strong>Express</strong>,
+                            and <strong>Spring Boot</strong> for backend services, with databases like
+                            <strong>PostgreSQL</strong> and <strong>MongoDB</strong>.
+                            I'm also proficient in <strong>Angular</strong>, <strong>Java</strong>,
+                            <strong>PHP</strong>, and modern styling with <strong>Tailwind CSS</strong>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        My <span class="gradient-text">Projects</span>
+                    </h2>
+                    <p class="section-subtitle">
+                        A showcase of my recent work and personal projects
+                    </p>
+                </div>
+
+                <!-- Category Filter -->
+                <div class="projects-filter">
+                    <button onclick="filterProjects('All')" class="filter-btn active" data-category="All">
+                        <i class="fas fa-globe"></i>
+                        All
+                    </button>
+                    <button onclick="filterProjects('Frontend')" class="filter-btn" data-category="Frontend">
+                        <i class="fas fa-globe"></i>
+                        Frontend
+                    </button>
+                    <button onclick="filterProjects('Backend')" class="filter-btn" data-category="Backend">
+                        <i class="fas fa-code"></i>
+                        Backend
+                    </button>
+                    <button onclick="filterProjects('Fullstack')" class="filter-btn" data-category="Fullstack">
+                        <i class="fas fa-layer-group"></i>
+                        Fullstack
+                    </button>
+                    <button onclick="filterProjects('Mobile')" class="filter-btn" data-category="Mobile">
+                        <i class="fas fa-mobile-alt"></i>
+                        Mobile
+                    </button>
+                    <button onclick="filterProjects('Blockchain')" class="filter-btn" data-category="Blockchain">
+                        <i class="fas fa-code"></i>
+                        Blockchain
+                    </button>
+                </div>
+
+                <!-- Projects Grid -->
+                <div class="projects-grid" id="projectsGrid">
+                    <!-- Projects will be populated by JavaScript -->
+                </div>
+
+                <!-- Featured Project -->
+                <div class="featured-project">
+                    <div class="glass-card">
+                        <h3 class="card-title gradient-text">More Projects</h3>
+                        <p class="card-text">
+                            Want to see more of my work? Check out my GitHub profile for additional projects, 
+                            contributions, and code repositories showcasing my development skills across 
+                            various technologies and frameworks.
+                        </p>
+                        <button onclick="window.open('https://github.com/bspark23', '_blank')"
+                            class="btn-primary">
+                            <i class="fab fa-github"></i>
+                            See All Projects on GitHub
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        My <span class="gradient-text">Services</span>
+                    </h2>
+                    <p class="section-subtitle">
+                        What I can do for you and your business
+                    </p>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card glass-card">
+                        <div class="service-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="service-title">Web Development</h3>
+                        <p class="service-desc">Custom web applications built with modern technologies</p>
+                        <ul class="service-features">
+                            <li>Responsive Design</li>
+                            <li>Performance Optimization</li>
+                            <li>SEO Friendly</li>
+                            <li>Cross-browser Compatibility</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card glass-card">
+                        <div class="service-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h3 class="service-title">Fullstack Development</h3>
+                        <p class="service-desc">End-to-end web app solutions — from frontend to backend.</p>
+                        <ul class="service-features">
+                            <li>React, Node.js, Express, MongoDB</li>
+                            <li>RESTful APIs & Database Integration</li>
+                            <li>Scalable Architecture/ Ai integration</li>
+                            <li>API Development</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card glass-card">
+                        <div class="service-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3 class="service-title"> E-Commerce Solutions</h3>
+                        <p class="service-desc">Professional online stores with smooth user experience.</p>
+                        <ul class="service-features">
+                            <li>Product Management System</li>
+                            <li>Payment Gateway Integration (Paystack, Stripe)</li>
+                            
+                        </ul>
+                    </div>
+
+                    <div class="service-card glass-card">
+                        <div class="service-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3 class="service-title">Maintenance & Optimization</h3>
+                        <p class="service-desc">Keep your site secure, updated, and performing at its best.</p>
+                        <ul class="service-features">
+                            <li>Speed Optimization</li>
+                            <li>Bug Fixing</li>
+                            <li>Regular Updates</li>
+                            <li>Hosting & Deployment Support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certificates Section 
+        <section id="certificates" class="certificates-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        My <span class="gradient-text">Certificates</span>
+                    </h2>
+                    <p class="section-subtitle">
+                        Professional certifications and achievements
+                    </p>
+                </div>
+
+                <div class="certificates-grid">
+                    <div class="certificate-card glass-card">
+                        <div class="certificate-thumbnail">
+                            <i class="fab fa-aws"></i>
+                        </div>
+                        <div class="certificate-info">
+                            <h3 class="certificate-title">AWS Certified Developer</h3>
+                            <p class="certificate-issuer">Amazon Web Services</p>
+                            <p class="certificate-date">August 15, 2023</p>
+                        </div>
+                        <button onclick="openCertificate('aws-developer')" class="certificate-btn">
+                            <i class="fas fa-eye"></i>
+                            View
+                        </button>
+                    </div>
+
+                    <div class="certificate-card glass-card">
+                        <div class="certificate-thumbnail">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <div class="certificate-info">
+                            <h3 class="certificate-title">React Advanced Patterns</h3>
+                            <p class="certificate-issuer">Meta</p>
+                            <p class="certificate-date">June 20, 2023</p>
+                        </div>
+                        <button onclick="openCertificate('react-advanced')" class="certificate-btn">
+                            <i class="fas fa-eye"></i>
+                            View
+                        </button>
+                    </div>
+
+                    <div class="certificate-card glass-card">
+                        <div class="certificate-thumbnail">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="certificate-info">
+                            <h3 class="certificate-title">Full Stack Web Development</h3>
+                            <p class="certificate-issuer">freeCodeCamp</p>
+                            <p class="certificate-date">December 10, 2022</p>
+                        </div>
+                        <button onclick="openCertificate('fullstack-web')" class="certificate-btn">
+                            <i class="fas fa-eye"></i>
+                            View
+                        </button>
+                    </div>
+
+                    <div class="certificate-card glass-card">
+                        <div class="certificate-thumbnail">
+                            <i class="fab fa-node-js"></i>
+                        </div>
+                        <div class="certificate-info">
+                            <h3 class="certificate-title">Node.js Application Development</h3>
+                            <p class="certificate-issuer">IBM</p>
+                            <p class="certificate-date">March 25, 2023</p>
+                        </div>
+                        <button onclick="openCertificate('nodejs-ibm')" class="certificate-btn">
+                            <i class="fas fa-eye"></i>
+                            View
+                        </button>
+                    </div>
+
+                    <div class="certificate-card glass-card">
+                        <div class="certificate-thumbnail">
+                            <i class="fab fa-microsoft"></i>
+                        </div>
+                        <div class="certificate-info">
+                            <h3 class="certificate-title">TypeScript Fundamentals</h3>
+                            <p class="certificate-issuer">Microsoft</p>
+                            <p class="certificate-date">January 18, 2023</p>
+                        </div>
+                        <button onclick="openCertificate('typescript-fundamentals')" class="certificate-btn">
+                            <i class="fas fa-eye"></i>
+                            View
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        Get In <span class="gradient-text">Touch</span>
+                    </h2>
+                    <p class="section-subtitle">
+                        Let's work together to bring your ideas to life
+                    </p>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Contact Info -->
+                    <div class="contact-info">
+                        <div class="contact-item glass-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <p>adaoma2826@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item glass-card">
+                            <div class="contact-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>WhatsApp</h3>
+                                <p>+2348036630578</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item glass-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Location</h3>
+                                <p>Port Harcourt, Nigeria</p>
+                            </div>
+                        </div>
+
+                        <!-- Education Section -->
+                        <div class="contact-item glass-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Education</h3>
+                                <p>Computer Science Ongoing</p>
+                                <small style="color: #94a3b8;">Ahmadu Bello University</small>
+                            </div>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="https://github.com/bspark23" target="_blank" class="social-link" title="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/blessing-mbata" target="_blank" class="social-link"
+                                title="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://twitter.com/blessing_mbata" target="_blank" class="social-link"
+                                title="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://instagram.com/blessing_mbata" target="_blank" class="social-link"
+                                title="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="mailto:adaoma2826@gmail.com" class="social-link" title="Email">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                           
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-container">
+                        <form class="contact-form glass-card" id="contactForm">
+                            <h3 class="card-title gradient-text">Quick Contact</h3>
+
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inquiry">Inquiry Type</label>
+                                <select id="inquiry" name="inquiry" required>
+                                    <option value="">Select inquiry type</option>
+                                    <option value="Web Development">Web Development</option>
+                                    <option value="Mobile App Development">Maintenance & Optimization</option>
+                                    <option value="UI/UX Design">E-Commerce Solutions</option>
+                                    <option value="Full Stack Development">Full Stack Development</option>
+                                    <option value="Technical Consultation">Technical Consultation</option>
+                                    <option value="Partnership">Partnership</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+
+                            <button type="button" class="btn-primary" onclick="previewMessage()">
+                                <span>Next: Preview Message</span>
+                            </button>
+                        </form>
+
+                        <!-- Message Preview -->
+                        <div class="message-preview glass-card" id="messagePreview" style="display: none;">
+                            <h3 class="card-title gradient-text">Preview Your Message</h3>
+                            <div class="preview-content" id="previewContent"></div>
+                            <div class="preview-actions">
+                                <button type="button" class="btn-secondary" onclick="editMessage()">
+                                    <i class="fas fa-edit"></i>
+                                    Edit
+                                </button>
+                                <button type="button" class="btn-primary" onclick="sendWhatsAppMessage()">
+                                    <i class="fab fa-whatsapp"></i>
+                                    Send Message
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2024 Blessing Mbata. All rights reserved.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <div class="floating-buttons">
+        <button onclick="scrollToTop()" class="floating-btn scroll-top-btn" id="scrollToTopBtn">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        <a href="mailto:adaoma2826@gmail.com" class="floating-btn email-btn" id="emailBtn" title="Send Email">
+            <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://wa.me/2348036630578?text=Hi%2C%20my%20name%20is%20%5BYour%20Name%5D.%20I%20want%20to%20inquire%20about%20your%20services."
+            target="_blank" class="floating-btn whatsapp-btn" id="whatsappBtn" title="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast-content">
+            <div class="toast-icon"></div>
+            <div class="toast-message"></div>
+        </div>
+    </div>
+
+    <!-- PDF Modal -->
+    <div class="pdf-modal" id="pdfModal">
+        <div class="pdf-modal-content">
+            <div class="pdf-modal-header">
+                <h3 id="pdfModalTitle">Document</h3>
+                <div class="pdf-modal-actions">
+                    <button onclick="downloadCurrentPDF()" class="pdf-action-btn" title="Download PDF">
+                        <i class="fas fa-download"></i>
+                    </button>
+                    <button onclick="openCurrentPDFInNewTab()" class="pdf-action-btn" title="Open in new tab">
+                        <i class="fas fa-external-link-alt"></i>
+                    </button>
+                    <button onclick="closePDFModal()" class="pdf-modal-close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="pdf-modal-body">
+                <!-- Loading Indicator -->
+                <div class="pdf-loading" id="pdfLoading">
+                    <div class="loading-spinner-large"></div>
+                    <p>Loading PDF...</p>
+                </div>
+                <!-- PDF Frame -->
+                <iframe id="pdfFrame" src="" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="portfolio-script.js"></script>
+</body>
+
+</html>
