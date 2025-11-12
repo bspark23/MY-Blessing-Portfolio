@@ -28,7 +28,15 @@ const SKILLS = [
     { name: 'PHP', level: 75, category: 'Language', icon: 'fab fa-php' },
     { name: 'Docker', level: 60, category: 'Tools', icon: 'fab fa-docker' },
     { name: 'AWS', level: 50, category: 'Cloud', icon: 'fab fa-aws' },
-    { name: 'Git', level: 99, category: 'Tools', icon: 'fab fa-git-alt' }
+    { name: 'Git', level: 99, category: 'Tools', icon: 'fab fa-git-alt' },
+    { name: 'ChatGPT', level: 95, category: 'AI', icon: 'fas fa-robot' },
+    { name: 'Gemini AI', level: 99, category: 'AI', icon: 'fas fa-robot' },
+    { name: 'Claude AI', level: 90, category: 'AI', icon: 'fas fa-robot' },
+    { name: 'Canva Magic Studio', level: 99, category: 'AI', icon: 'fas fa-robot' },
+    { name: 'Cursor AI', level: 90, category: 'AI', icon: 'fas fa-robot' },
+    { name: 'Lovable AI', level: 99, category: 'AI', icon: 'fas fa-robot' },
+    { name: 'Bolt AI', level: 99, category: 'AI', icon: 'fas fa-robot' },
+    { name: 'Replit AI', level: 99, category: 'AI', icon: 'fas fa-robot' },
 ];
 
 const PROJECTS = [
