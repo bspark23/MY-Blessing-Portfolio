@@ -8,8 +8,7 @@ const PERSONAL_INFO = {
     experience: '3+ years',
     email: 'adaoma2826@gmail.com',
     whatsapp: '+2348036630578',
-    github: 'https://github.com/bspark23',
-    cv: './pdfs/cv.pdf'
+    github: 'https://github.com/bspark23'
 };
 
 const SKILLS = [
@@ -563,23 +562,6 @@ function scrollToTop() {
 // External Links
 function openGitHub() {
     window.open(PERSONAL_INFO.github, '_blank');
-}
-
-function openCV() {
-    // Use your actual CV PDF
-    const cvPath = PERSONAL_INFO.cv;
-    openPDFModal(cvPath, 'Blessing Mbata - CV');
-}
-
-function downloadCV() {
-    // Create a download link for the CV
-    const link = document.createElement('a');
-    link.href = PERSONAL_INFO.cv;
-    link.download = 'Blessing-Mbata-CV.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    showToast('CV download started!', 'success');
 }
 
 function openCertificate(certificateId) {
